@@ -7,7 +7,7 @@
 | name               | string | null: false               |
 | industry           | string |                           |
 | capital            | string |                           |
-| earning            | string |                           |
+| earnings           | string |                           |
 | employee           | string |                           |
 | place              | string |                           |
 | average_income     | string |                           |
