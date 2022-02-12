@@ -1,0 +1,67 @@
+.form-box {
+  width: 70vw;
+  background-color: white;
+  margin-left: 15vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-page-title {
+  text-align: center;
+  margin: 2vh 0px;
+}
+
+.corporate-box {
+  padding: 3% 7% 0px 10%;
+}
+
+.corporate-text {
+  width: 94%;
+}
+
+.indispensable {
+  background: #4be8c9;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.arbitrary {
+  background: #ccc;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 4px;
+}
+
+.form-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-btn-box {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-btn {
+  background: #4be8c9;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 5vh 30vw 3vh;
+}
+
+.back-btn {
+  background: #aaa;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0px 31vw 3vh;
+}

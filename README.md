@@ -5,16 +5,16 @@
 | Column             | Type   | Options                   |
 | ------------------ | ------ | ------------------------- |
 | name               | string | null: false               |
-| industry           | string |                           |
+| industry           | string | null: false               |
 | capital            | string |                           |
-| earning            | string |                           |
+| earnings           | string |                           |
 | employee           | string |                           |
 | place              | string |                           |
 | average_income     | string |                           |
 | average_age        | string |                           |
-| content            | string |                           |
-| human_resource     | string |                           |
-| strength           | string |                           |
-| weakness           | string |                           |
-| selection_method   | string |                           |
-| others             | string |                           |
+| business_content   | text   |                           |
+| human_resource     | text   |                           |
+| strength           | text   |                           |
+| weakness           | text   |                           |
+| selection_method   | text   |                           |
+| others             | text   |                           |

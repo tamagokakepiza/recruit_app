@@ -13,6 +13,20 @@
 ActiveRecord::Schema.define(version: 2022_02_10_084534) do
 
   create_table "corporates", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "industry", null: false
+    t.string "capital"
+    t.string "earnings"
+    t.string "employee"
+    t.string "place"
+    t.string "average_income"
+    t.string "average_age"
+    t.text "business_content"
+    t.text "human_resource"
+    t.text "strength"
+    t.text "weakness"
+    t.text "selection_method"
+    t.text "others"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

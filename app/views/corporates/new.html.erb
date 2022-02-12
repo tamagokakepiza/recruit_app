@@ -1,0 +1,120 @@
+<header class='header'>
+  <%= link_to image_tag("recruitment_logo_color", class:"header-logo"), "/"  %>
+</header>
+
+<div class='main'>
+  
+  <div class='form-box'>
+    <h2 class='new-page-title'>調査した企業情報を入力しよう！</h2>
+    <%= form_with model: @corporate, local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+    <div class='corporate-box'>
+      <div class='corporate-name'>
+        <span class='form-text'>企業名</span>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :name, class:'corporate-text', id:'corporate_name', placeholder:'企業の正式名称を入力しよう(必須)', maxlength:'150' %>
+    </div>
+    <div class='corporate-box'>
+      <div class='corporate-industry'>
+        <span class='form-text'>業界・業種</span>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :industry, class:'corporate-text', id:'corporate_industry', placeholder:'企業の業界・業種を入力しよう(必須)', maxlength:'50' %>
+    </div>
+    <div class='corporate-box'>
+      <div class='corporate-capital'>
+        <span class='form-text'>資本金</span>
+        <span class="arbitrary">任意</span>
+      </div>
+      <%= f.text_field :capital, class:'corporate-text', id:'corporate_capital', placeholder:'企業の資本金を調査しよう(任意)', maxlength:'50' %>
+    </div>
+    <div class='corporate-box'>
+      <div class='corporate-earnings'>
+        <span class='form-text'>売上高</span>
+        <span class="arbitrary">任意</span>
+      </div>
+      <%= f.text_field :earnings, class:'corporate-text', id:'corporate_earnings', placeholder:'企業の売上高を調査しよう(任意)', maxlength:'50' %>
+    </div>
+    <div class='corporate-box'>
+      <div class='corporate-employee'>
+        <span class='form-text'>社員数</span>
+        <span class="arbitrary">任意</span>
+      </div>
+      <%= f.text_field :employee, class:'corporate-text', id:'corporate_employee', placeholder:'企業の社員数を調査しよう(任意)', maxlength:'50' %>
+    </div>
+    <div class='corporate-box'>
+      <div class='corporate-place'>
+        <span class='form-text'>本社の場所</span>
+        <span class="arbitrary">任意</span>
+      </div>
+      <%= f.text_field :place, class:'corporate-text', id:'corporate_place', placeholder:'本社の場所を調査しよう(任意)', maxlength:'50' %>
+    </div>
+    <div class='corporate-box'>
+      <div class='corporate-average-income'>
+        <span class='form-text'>平均収入</span>
+        <span class="arbitrary">任意</span>
+      </div>
+      <%= f.text_field :average_income, class:'corporate-text', id:'corporate_average_income', placeholder:'企業の平均収入を調査しよう(任意)', maxlength:'50' %>
+    </div>
+    <div class='corporate-box'>
+      <div class='corporate-average-age'>
+        <span class='form-text'>平均年齢</span>
+        <span class="arbitrary">任意</span>
+      </div>
+      <%= f.text_field :average_age, class:'corporate-text', id:'corporate_average_age', placeholder:'企業の平均年齢を調査しよう(任意)', maxlength:'50' %>
+    </div>
+    <div class='corporate-box'>
+      <div class='corporate-business_content'>
+        <span class='form-text'>事業内容</span>
+        <span class="arbitrary">任意</span>
+      </div>
+      <%= f.text_area :business_content, class:'corporate-text', id:'corporate_business_content', placeholder:'企業の事業内容を調査しよう(任意)', maxlength:'1000' %>
+    </div>
+    <div class='corporate-box'>
+      <div class='corporate-human_resource'>
+        <span class='form-text'>求める人材</span>
+        <span class="arbitrary">任意</span>
+      </div>
+      <%= f.text_area :human_resource, class:'corporate-text', id:'corporate_human_resource', placeholder:'企業が求めている人材を調査しよう(任意)', maxlength:'1000' %>
+    </div>
+    <div class='corporate-box'>
+      <div class='corporate-strength'>
+        <span class='form-text'>企業の強み</span>
+        <span class="arbitrary">任意</span>
+      </div>
+      <%= f.text_area :strength, class:'corporate-text', id:'corporate_strength', placeholder:'企業の強みを調査しよう(任意)', maxlength:'1000' %>
+    </div>
+    <div class='corporate-box'>
+      <div class='corporate-weakness'>
+        <span class='form-text'>企業の弱み</span>
+        <span class="arbitrary">任意</span>
+      </div>
+      <%= f.text_area :weakness, class:'corporate-text', id:'corporate_weakness', placeholder:'企業の弱みを調査しよう(任意)', maxlength:'1000' %>
+    </div>
+    <div class='corporate-box'>
+      <div class='corporate-selection-method'>
+        <span class='form-text'>選考方法</span>
+        <span class="arbitrary">任意</span>
+      </div>
+      <%= f.text_area :selection_method, class:'corporate-text', id:'corporate_selection_method', placeholder:'企業の選考方法を調査しよう(任意)', maxlength:'1000' %>
+    </div>
+    <div class='corporate-box'>
+      <div class='corporate-others'>
+        <span class='form-text'>その他</span>
+        <span class="arbitrary">任意</span>
+      </div>
+      <%= f.text_area :others, class:'corporate-text', id:'corporate_others', placeholder:'その他にまとめておきたい内容を入力しよう(任意)', maxlength:'2000' %>
+    </div>
+    <div class='form-btn-box'>
+      <%= f.submit '保存', class:'form-btn' %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+  <% end %>
+  </div>
+</div>
+
+<footer class='footer'>
+  <%= link_to image_tag("recruitment_logo_white", class:"footer-logo"), "/"  %>
+  <p>©️ 2022 tamagokakepiza</p>
+</footer>
