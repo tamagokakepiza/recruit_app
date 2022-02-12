@@ -14,9 +14,9 @@ ActiveRecord::Schema.define(version: 2022_02_10_084534) do
 
   create_table "corporates", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name", null: false
-    t.string "industry"
+    t.string "industry", null: false
     t.string "capital"
-    t.string "earning"
+    t.string "earnings"
     t.string "employee"
     t.string "place"
     t.string "average_income"

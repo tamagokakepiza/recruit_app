@@ -2,9 +2,9 @@ class CreateCorporates < ActiveRecord::Migration[6.0]
   def change
     create_table :corporates do |t|
       t.string     :name,              null: false
-      t.string     :industry
+      t.string     :industry,          null: false
       t.string     :capital
-      t.string     :earning
+      t.string     :earnings
       t.string     :employee
       t.string     :place
       t.string     :average_income

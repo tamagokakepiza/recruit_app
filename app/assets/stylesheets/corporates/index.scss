@@ -13,7 +13,7 @@ ul,li {
   margin: 0;
 }
 
-.top-page-header {
+.header {
   width: 100vw;
   height: 20vh;
   background-color: #c4c2c4;
@@ -24,14 +24,20 @@ ul,li {
 
 .main {
   width: 100vw;
-  height: 80vh;
-  background-color: white;
+  background-color: #c4c2c4;
+}
+
+.corporate-display {
+  width: 100vw;
+  height: auto;
+  min-height: 70vh;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  background-color: white;
 }
 
-.top-page-footer {
+.footer {
   width: 100vw;
   height: 10vh;
   background-color: #c4c2c4;

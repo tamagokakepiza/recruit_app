@@ -5,7 +5,7 @@
 | Column             | Type   | Options                   |
 | ------------------ | ------ | ------------------------- |
 | name               | string | null: false               |
-| industry           | string |                           |
+| industry           | string | null: false               |
 | capital            | string |                           |
 | earnings           | string |                           |
 | employee           | string |                           |
