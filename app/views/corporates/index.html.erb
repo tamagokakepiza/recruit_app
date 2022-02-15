@@ -8,7 +8,7 @@
       <% if Corporate.exists? %>
         <% @corporates.each do |corporate| %>
           <li class='list'>
-            <%= link_to root_path, class:'corporate-link' do %>
+            <%= link_to corporate_path(corporate.id), class:'corporate-link' do %>
               <h2 class='list-title'>
                 <%= corporate.name %>
               </h2>
