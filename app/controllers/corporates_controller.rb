@@ -16,6 +16,10 @@ class CorporatesController < ApplicationController
     end
   end
 
+  def show
+    @corporate = Corporate.find(params[:id])
+  end
+
   private
 
   def corporate_params
