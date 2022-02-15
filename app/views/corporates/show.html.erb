@@ -1,0 +1,57 @@
+<header class='header'>
+  <%= link_to image_tag("/assets/images/recruitment_logo_color", class:"header-logo"), "/"  %>
+</header>
+
+<div class='main'>
+  <div class='corporate-show'>
+    <h2 class='list-title-show'>
+      <%= @corporate.name %>
+    </h2>
+    <div class='corporate-info'>
+      <p class='corporate-data'>
+        <%= @corporate.industry %>show
+      </p>
+      <p class='corporate-data'>
+        <%= @corporate.capital %>
+      </p>
+      <p class='corporate-data'>
+        <%= @corporate.earnings %>
+      </p>
+      <p class='corporate-data'>
+        <%= @corporate.employee %>
+      </p>
+      <p class='corporate-data'>
+        <%= @corporate.place %>
+      </p>
+      <p class='corporate-data'>
+        <%= @corporate.average_income %>
+      </p>
+      <p class='corporate-data'>
+        <%= @corporate.average_age %>
+      </p>
+      <p class='corporate-data'>
+        <%= @corporate.business_content %>
+      </p>
+      <p class='corporate-data'>
+        <%= @corporate.human_resource %>
+      </p>
+      <p class='corporate-data'>
+        <%= @corporate.strength %>
+      </p>
+      <p class='corporate-data'>
+        <%= @corporate.weakness %>
+      </p>
+      <p class='corporate-data'>
+        <%= @corporate.selection_method %>
+      </p>
+      <p class='corporate-data'>
+        <%= @corporate.others %>
+      </p>
+    </div>
+  </div>
+</div>
+
+<footer class='footer'>
+  <%= link_to image_tag("/assets/images/recruitment_logo_white", class:"footer-logo"), "/"  %>
+  <p>©️ 2022 tamagokakepiza</p>
+</footer>
