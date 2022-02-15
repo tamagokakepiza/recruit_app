@@ -32,9 +32,51 @@ ul,li {
   height: auto;
   min-height: 70vh;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   background-color: white;
+}
+
+.corporate-list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  flex-wrap: wrap;
+  margin-left: 1%;
+}
+
+.list {
+  width: 25%;
+  height: auto;
+  margin: 2%;
+  padding: 2%;
+  background-color: #4be8c9b7;
+}
+
+.corporate-link {
+  text-decoration: none;
+}
+
+.corporate-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-title {
+  color: #494949;
+  border-bottom: 2px solid #e8e843b2;
+}
+
+.corporate-data {
+  color: #494949;
+  font-size: 20px;
+}
+
+.top-message {
+  color: #494949;
 }
 
 .footer {
