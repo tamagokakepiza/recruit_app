@@ -26,6 +26,12 @@ class CorporatesController < ApplicationController
     redirect_to corporate_path(@corporate.id) if @corporate.update(corporate_params)
   end
 
+  def destroy
+    @corporate = Corporate.find(params[:id])
+    @corporate.destroy
+    redirect_to root_path
+  end
+
   private
 
   def corporate_params
