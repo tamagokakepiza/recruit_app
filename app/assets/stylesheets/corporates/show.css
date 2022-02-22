@@ -1,9 +1,7 @@
 .corporate-show {
   width: 70vw;
-  height: auto;
   padding: 2%;
   background-color: white;
-  margin-left: 15vw;
   display: flex;
   flex-direction: column;
 }
@@ -11,4 +9,24 @@
 .list-title-show {
   color: #494949;
   border-bottom: 2px solid #4be8c9;
+}
+
+.corporate-text-title {
+  width: 94%;
+  font-size: 25px;
+  margin: 1%;
+}
+
+.edit-back-btn {
+  background: #aaa;
+  color: #fff;
+  text-decoration: none;
+  width: auto;
+  border: none;
+  padding: 10px;
+}
+
+.corporate-text {
+  margin: 1%;
+  font-size: 15px;
 }

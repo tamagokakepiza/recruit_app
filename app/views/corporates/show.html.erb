@@ -1,57 +1,91 @@
 <header class='header'>
-  <%= link_to image_tag("/assets/images/recruitment_logo_color", class:"header-logo"), "/"  %>
+  <%= link_to image_tag(asset_path("recruitment_logo_color"), class:"header-logo"), "/"  %>
 </header>
 
+<input style="display: none;" id="js-corporate-id" value=<%= @corporate.id %>>
 <div class='main'>
   <div class='corporate-show'>
-    <h2 class='list-title-show'>
-      <%= @corporate.name %>
-    </h2>
+    <%= form_with model: @corporate, local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object, id:'error' %>
+    <div class='list-title-show'>
+      <h2 class='corporate-data'>
+        <%= @corporate.name %>
+      </h2>
+      <div id="js-textarea-corporate" class="list-title-edit">
+        <%= f.text_field :name, style:"display: none;", value:@corporate.name, class:'corporate-text', id:'corporate_name', placeholder:'企業の正式名称を入力しよう(必須)', maxlength:'150' %>
+      </div>
+    </div>
     <div class='corporate-info'>
       <p class='corporate-data'>
-        <%= @corporate.industry %>show
+        <%= @corporate.industry %>
       </p>
+      <%= f.text_field :industry, style:"display: none;", value:@corporate.industry, class:'corporate-text', id:'corporate_industry', placeholder:'企業の業界・業種を入力しよう(必須)', maxlength:'50' %>
       <p class='corporate-data'>
         <%= @corporate.capital %>
       </p>
+      <%= f.text_field :capital, style:"display: none;", value:@corporate.capital, class:'corporate-text', id:'corporate_capital', placeholder:'企業の資本金を調査しよう(任意)', maxlength:'50' %>
       <p class='corporate-data'>
         <%= @corporate.earnings %>
       </p>
+      <%= f.text_field :earnings, style:"display: none;", value:@corporate.earnings, class:'corporate-text', id:'corporate_earnings', placeholder:'企業の売上高を調査しよう(任意)', maxlength:'50' %>
       <p class='corporate-data'>
         <%= @corporate.employee %>
       </p>
+      <%= f.text_field :employee, style:"display: none;", value:@corporate.employee, class:'corporate-text', id:'corporate_employee', placeholder:'企業の社員数を調査しよう(任意)', maxlength:'50' %>
       <p class='corporate-data'>
         <%= @corporate.place %>
       </p>
+      <%= f.text_field :place, style:"display: none;", value:@corporate.place, class:'corporate-text', id:'corporate_place', placeholder:'本社の場所を調査しよう(任意)', maxlength:'50' %>
       <p class='corporate-data'>
         <%= @corporate.average_income %>
       </p>
+      <%= f.text_field :average_income, style:"display: none;", value:@corporate.average_income, class:'corporate-text', id:'corporate_average_income', placeholder:'企業の平均収入を調査しよう(任意)', maxlength:'50' %>
       <p class='corporate-data'>
         <%= @corporate.average_age %>
       </p>
+      <%= f.text_field :average_age, style:"display: none;", value:@corporate.average_age, class:'corporate-text', id:'corporate_average_age', placeholder:'企業の平均年齢を調査しよう(任意)', maxlength:'50' %>
       <p class='corporate-data'>
         <%= @corporate.business_content %>
       </p>
+      <%= f.text_area :business_content, style:"display: none;", value:@corporate.business_content, class:'corporate-text', id:'corporate_business_content', placeholder:'企業の事業内容を調査しよう(任意)', maxlength:'1000' %>
       <p class='corporate-data'>
         <%= @corporate.human_resource %>
       </p>
+      <%= f.text_area :human_resource, style:"display: none;", value:@corporate.human_resource, class:'corporate-text', id:'corporate_human_resource', placeholder:'企業が求めている人材を調査しよう(任意)', maxlength:'1000' %>
       <p class='corporate-data'>
         <%= @corporate.strength %>
       </p>
+      <%= f.text_area :strength, style:"display: none;", value:@corporate.strength, class:'corporate-text', id:'corporate_strength', placeholder:'企業の強みを調査しよう(任意)', maxlength:'1000' %>
       <p class='corporate-data'>
         <%= @corporate.weakness %>
       </p>
+      <%= f.text_area :weakness, style:"display: none;", value:@corporate.weakness, class:'corporate-text', id:'corporate_weakness', placeholder:'企業の弱みを調査しよう(任意)', maxlength:'1000' %>
       <p class='corporate-data'>
         <%= @corporate.selection_method %>
       </p>
+      <%= f.text_area :selection_method, style:"display: none;", value:@corporate.selection_method, class:'corporate-text', id:'corporate_selection_method', placeholder:'企業の選考方法を調査しよう(任意)', maxlength:'1000' %>
       <p class='corporate-data'>
         <%= @corporate.others %>
       </p>
+      <%= f.text_area :others, style:"display: none;", value:@corporate.others, class:'corporate-text', id:'corporate_others', placeholder:'その他にまとめておきたい内容を入力しよう(任意)', maxlength:'2000' %>
+    <li class='error-message' style="display: none;" id="name-error-message">Name can't be blank</li>
+    <li class='error-message' style="display: none;" id="industry-error-message">Industry can't be blank</li>
+      <div id="button-box">
+        <div class='form-btn-box'>
+          <span class="form-btn", id="js-edit-corporate-btn">編集</span>
+          <%=link_to 'もどる', root_path, class:"back-btn" %>
+        </div>
+      </div>
+      <div class='form-btn-box' id="js-corporate-button" style="display: none;">
+        <button data-update type="submit" id = "save-id" class="form-btn">変更</button>
+        <button data-cancel type="button" id = "cancel-id" class="edit-back-btn">キャンセル</button>
+      </div>
     </div>
+    <% end %>
   </div>
 </div>
 
 <footer class='footer'>
-  <%= link_to image_tag("/assets/images/recruitment_logo_white", class:"footer-logo"), "/"  %>
+  <%= link_to image_tag(asset_path("recruitment_logo_white"), class:"footer-logo"), "/"  %>
   <p>©️ 2022 tamagokakepiza</p>
 </footer>
