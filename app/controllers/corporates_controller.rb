@@ -1,4 +1,5 @@
 class CorporatesController < ApplicationController
+  protect_from_forgery except: :update
   def index
     @corporates = Corporate.all
   end
@@ -18,6 +19,11 @@ class CorporatesController < ApplicationController
 
   def show
     @corporate = Corporate.find(params[:id])
+  end
+
+  def update
+    @corporate = Corporate.find(params[:id])
+    redirect_to corporate_path(@corporate.id) if @corporate.update(corporate_params)
   end
 
   private

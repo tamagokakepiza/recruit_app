@@ -25,6 +25,9 @@ ul,li {
 .main {
   width: 100vw;
   background-color: #c4c2c4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .corporate-display {
